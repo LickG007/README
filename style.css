@@ -1,0 +1,81 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #000;
+  color: #fff;
+  margin: 5px;
+}
+
+h1, h2 {
+  color: #0cf;
+}
+
+img {
+  max-width: 20%;
+  max-height: auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li:before {
+  content: "•";
+  color: #0cf;
+  font-size: 18px;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+a {
+  color: #0cf;
+  text-decoration: none;
+  border-bottom: 1px solid #0cf;
+}
+
+a:hover {
+  color: #fff;
+  background-color: #0cf;
+  border-bottom: none;
+}
+
+.highlight {
+  background-color: #0cf;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.highlight:hover {
+  background-color: #000;
+}
+
+/* adicione o código abaixo para a animação */
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 50px;
+  position: relative;
+  background: linear-gradient(to bottom, rgb(80, 80, 80), #00f);
+  clip-path: polygon(0 0, 0 0, 0% 100%, 0% 100%);
+  animation: reveal 2s forwards;
+}
+
+h1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes reveal {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0% 100%, 0% 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
